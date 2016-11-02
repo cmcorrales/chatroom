@@ -19,4 +19,7 @@ $(document).ready(function() {
     });
     socket.on('message', addMessage);
     socket.on('userJoin', addMessage);
+    socket.on('count', addMessage);
+    var nickname = prompt("What is your nickname?");
+    server.emit('join', nickname)
 });
